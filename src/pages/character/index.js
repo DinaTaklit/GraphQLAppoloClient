@@ -1,9 +1,10 @@
-import { useSearchParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "./index.css";
 import { useCharacter } from "../../hooks/useCharacter";
 
 export default function Character() {
-  const { loading, error, data } = useCharacter(2);
+  const { id } = useParams();
+  const { loading, error, data } = useCharacter(id);
 
   if (loading) {
     return <div>loading...</div>;

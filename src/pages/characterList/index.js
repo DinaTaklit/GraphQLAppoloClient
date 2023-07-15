@@ -1,4 +1,6 @@
-import { useCharacters } from "./hooks/useCharacters";
+import "./style.css";
+import { useCharacters } from "../../hooks/useCharacters";
+
 export default function CharactersList() {
   const { loading, error, data } = useCharacters();
   if (error) {

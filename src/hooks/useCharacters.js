@@ -1,6 +1,6 @@
 import { useQuery, gql } from "@apollo/client";
 const GET_CHARACTERS = gql`
-  query {
+  query getCharacters {
     characters {
       results {
         id
